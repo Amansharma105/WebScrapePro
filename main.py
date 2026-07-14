@@ -30,5 +30,9 @@ def alert():
 def dashboard():
     print("Launching dashboard...")
 
+@app.command()
+def html():
+    print("Generating HTML report...")
+
 if __name__ == "__main__":
     app()
