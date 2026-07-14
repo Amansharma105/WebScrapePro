@@ -18,5 +18,9 @@ def report():
 def analyze():
     print("Price analysis completed!")
 
+@app.command()
+def chart():
+    print("Generating price charts...")
+
 if __name__ == "__main__":
     app()
