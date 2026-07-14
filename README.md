@@ -100,38 +100,6 @@ WebScrapePro/
 - Pytest
 
 ---
-
-## Requirements
-
-- Python 3.11+
-- Git
-- Required Python Libraries:
-  - Typer
-  - Requests
-  - BeautifulSoup4
-  - Pandas
-  - SQLAlchemy
-  - Matplotlib
-  - Jinja2
-  - Streamlit
-  - APScheduler
-  - Pytest
-
----
-
-## Project Modules
-
-- Product Scraping
-- Database Management
-- Price Analysis
-- Dashboard
-- Report Generation
-- Email Alerts
-- Task Scheduling
-- Testing
-
----
-
 ## Future Improvements
 
 - Support for more e-commerce websites
@@ -140,14 +108,6 @@ WebScrapePro/
 - Email notifications
 - Export reports to PDF and Excel
 - Advanced price analytics
-
----
-
-## Status
-
-✅ Project Completed Successfully
-
----
 
 ## Author
 
