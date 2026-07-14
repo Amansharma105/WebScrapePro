@@ -22,5 +22,9 @@ def analyze():
 def chart():
     print("Generating price charts...")
 
+@app.command()
+def alert():
+    print("Sending price alerts...")
+
 if __name__ == "__main__":
     app()
