@@ -34,5 +34,13 @@ def dashboard():
 def html():
     print("Generating HTML report...")
 
+@app.command()
+def schedule():
+    print("Scheduler started...")
+
+@app.command()
+def test():
+    print("Running tests...")
+
 if __name__ == "__main__":
     app()
