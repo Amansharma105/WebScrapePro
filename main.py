@@ -14,5 +14,9 @@ def scrape():
 def report():
     print("Generating report...")
 
+@app.command()
+def analyze():
+    print("Price analysis completed!")
+
 if __name__ == "__main__":
     app()
