@@ -1,1 +1,25 @@
+[project]
+name = "WebScrapePro"
+version = "1.0.0"
+description = "E-Commerce Price Tracker & Alert Engine"
+authors = [
+    {name = "Aman Sharma"}
+]
+requires-python = ">=3.11"
 
+dependencies = [
+    "requests",
+    "beautifulsoup4",
+    "pandas",
+    "sqlalchemy",
+    "matplotlib",
+    "streamlit",
+    "apscheduler",
+    "pytest",
+    "lxml",
+    "typer"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
