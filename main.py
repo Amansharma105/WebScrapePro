@@ -26,5 +26,9 @@ def chart():
 def alert():
     print("Sending price alerts...")
 
+@app.command()
+def dashboard():
+    print("Launching dashboard...")
+
 if __name__ == "__main__":
     app()
