@@ -3,26 +3,32 @@
 <head>
     <title>WebScrapePro Report</title>
 </head>
+
 <body>
 
 <h1>WebScrapePro</h1>
 
-<h2>Price Tracking Report</h2>
-
-<p>Product Price Analysis Report</p>
-
 <table border="1">
+
 <tr>
 <th>Product</th>
 <th>Price</th>
 <th>Website</th>
 </tr>
 
+{% for product in products %}
+
 <tr>
-<td>Sample Product</td>
-<td>₹999</td>
-<td>Amazon</td>
+
+<td>{{ product.title }}</td>
+
+<td>{{ product.price }}</td>
+
+<td>{{ product.website }}</td>
+
 </tr>
+
+{% endfor %}
 
 </table>
 
