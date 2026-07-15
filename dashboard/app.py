@@ -1,9 +1,13 @@
 import streamlit as st
 
-st.title("WebScrapePro Dashboard")
+st.set_page_config(page_title="WebScrapePro")
 
-st.write("Welcome to the Price Tracker Dashboard")
+st.title("📈 WebScrapePro Dashboard")
 
-st.metric("Products Tracked", 10)
+st.metric("Products", 10)
 
-st.metric("Price Alerts", 2)
+st.metric("Alerts", 2)
+
+st.metric("Average Price", "₹52,000")
+
+st.success("Dashboard Loaded Successfully")
