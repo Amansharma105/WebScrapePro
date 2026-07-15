@@ -1,17 +1,14 @@
-def test_start():
-    assert True
+from analysis.price_analysis import analyze_prices
 
-def test_scraper():
-    assert True
-
-def test_database():
-    assert True
 
 def test_analysis():
-    assert True
 
-def test_dashboard():
-    assert True
+    prices = [100, 200, 300]
 
-def test_report():
-    assert True
+    result = analyze_prices(prices)
+
+    assert result["Lowest Price"] == 100
+
+    assert result["Highest Price"] == 300
+
+    assert result["Average Price"] == 200
