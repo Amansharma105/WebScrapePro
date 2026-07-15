@@ -1,10 +1,11 @@
 requests
 beautifulsoup4
 pandas
-sqlalchemy
 matplotlib
+jinja2
 streamlit
 apscheduler
 pytest
-lxml
+sqlalchemy
 typer
+reportlab
