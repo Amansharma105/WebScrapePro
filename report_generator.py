@@ -1,15 +1,15 @@
-from datetime import datetime
+from jinja2 import Environment, FileSystemLoader
+
 
 def generate_report(products):
-    report = []
-    report.append("WEBSCRAPEPRO PRICE REPORT")
-    report.append("=" * 40)
-    report.append(f"Generated: {datetime.now()}")
-    report.append("")
 
-    for product in products:
-        report.append(f"Product : {product['name']}")
-        report.append(f"Price   : ₹{product['price']}")
-        report.append("-" * 40)
+    env = Environment(loader=FileSystemLoader("templates"))
 
-    return "\n".join(report)
+    template = env.get_template("report.html")
+
+    html = template.render(products=products)
+
+    with open("reports/report.html", "w", encoding="utf-8") as file:
+        file.write(html)
+
+    print("HTML Report Generated Successfully")
