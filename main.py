@@ -1,61 +1,65 @@
 import typer
-from analysis.price_analysis import analyze_prices
+from scrapers.scraper import scrape_products
+from analysis.analysis import analyze_prices
+from alerts.email_alert import send_alert
+from dashboard.dashboard import launch_dashboard
+from reports.report_generator import generate_report
+from scheduler.scheduler import start_scheduler
 
-app = typer.Typer()
+app = typer.Typer(help="WebScrapePro - E-Commerce Price Tracker")
 
 
 @app.command()
 def start():
-    print("WebScrapePro is running!")
+    """Start the application"""
+    print("🚀 WebScrapePro Started Successfully")
 
 
 @app.command()
 def scrape():
-    print("Scraping product data...")
-
-
-@app.command()
-def report():
-    print("Generating report...")
+    """Scrape product prices"""
+    scrape_products()
 
 
 @app.command()
 def analyze():
-    prices = [49999, 47999, 48999, 46999]
-
-    result = analyze_prices(prices)
-
-    print(result)
+    """Analyze scraped prices"""
+    analyze_prices()
 
 
 @app.command()
-def chart():
-    print("Generating price charts...")
+def report():
+    """Generate HTML Report"""
+    generate_report()
 
 
 @app.command()
 def alert():
-    print("Sending price alerts...")
+    """Send Email Alert"""
+    send_alert()
 
 
 @app.command()
 def dashboard():
-    print("Launching dashboard...")
-
-
-@app.command()
-def html():
-    print("Generating HTML report...")
+    """Launch Dashboard"""
+    launch_dashboard()
 
 
 @app.command()
 def schedule():
-    print("Scheduler started...")
+    """Start Scheduler"""
+    start_scheduler()
 
 
 @app.command()
-def test():
-    print("Running tests...")
+def all():
+    """Run Complete Workflow"""
+    print("========== WebScrapePro ==========")
+    scrape_products()
+    analyze_prices()
+    generate_report()
+    send_alert()
+    print("✅ Project Completed Successfully")
 
 
 if __name__ == "__main__":
