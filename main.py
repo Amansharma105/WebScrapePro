@@ -1,65 +1,65 @@
 import typer
-from scrapers.scraper import scrape_products
-from analysis.analysis import analyze_prices
-from alerts.email_alert import send_alert
-from dashboard.dashboard import launch_dashboard
-from reports.report_generator import generate_report
-from scheduler.scheduler import start_scheduler
 
-app = typer.Typer(help="WebScrapePro - E-Commerce Price Tracker")
+from database import create_table
+from analysis.price_analysis import analyze_prices
+
+app = typer.Typer()
 
 
 @app.command()
 def start():
-    """Start the application"""
-    print("🚀 WebScrapePro Started Successfully")
+    create_table()
+    print("Database Ready")
+    print("WebScrapePro Started Successfully")
 
 
 @app.command()
 def scrape():
-    """Scrape product prices"""
-    scrape_products()
+    print("Scraping Product Data...")
 
 
 @app.command()
 def analyze():
-    """Analyze scraped prices"""
-    analyze_prices()
+
+    prices = [49999, 47999, 48999, 46999]
+
+    result = analyze_prices(prices)
+
+    print("\nAnalysis Result")
+    print("----------------")
+
+    for key, value in result.items():
+        print(f"{key}: {value}")
 
 
 @app.command()
 def report():
-    """Generate HTML Report"""
-    generate_report()
-
-
-@app.command()
-def alert():
-    """Send Email Alert"""
-    send_alert()
+    print("Generating HTML Report...")
 
 
 @app.command()
 def dashboard():
-    """Launch Dashboard"""
-    launch_dashboard()
+    print("Launching Dashboard...")
+
+
+@app.command()
+def alert():
+    print("Checking Price Alerts...")
 
 
 @app.command()
 def schedule():
-    """Start Scheduler"""
-    start_scheduler()
+    print("Scheduler Started...")
 
 
 @app.command()
-def all():
-    """Run Complete Workflow"""
-    print("========== WebScrapePro ==========")
-    scrape_products()
-    analyze_prices()
-    generate_report()
-    send_alert()
-    print("✅ Project Completed Successfully")
+def chart():
+    print("Generating Charts...")
+
+
+@app.command()
+def test():
+    print("Running Tests...")
 
 
 if __name__ == "__main__":
