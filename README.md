@@ -1,34 +1,31 @@
 # WebScrapePro
 
-WebScrapePro is a Python-based Command Line Interface (CLI) application for tracking product prices from e-commerce websites. It helps users monitor product prices, analyze trends, store product information, generate reports, and manage price alerts.
+WebScrapePro is a Python-based Command Line Interface (CLI) application that tracks product prices from e-commerce websites. It collects product information, stores data in a SQLite database, analyzes price trends, generates reports, visualizes data, and supports automated monitoring.
 
 ---
 
 ## Features
 
-- CLI using Typer
-- Product price scraping
-- Amazon scraper
-- Flipkart scraper
-- HTML parsing using BeautifulSoup
-- SQLite database integration
-- Product storage
-- Product model
-- Price analysis
-- Lowest, highest, and average price calculation
-- Line chart generation
-- Bar chart generation
-- Price trend visualization
-- HTML report generation
-- Jinja2 template support
-- Streamlit dashboard
-- Product statistics
-- Dashboard metrics
-- Email alert system
-- Automatic price checking
-- APScheduler integration
-- Scheduled tasks
-- Automated testing with Pytest
+- Command Line Interface using Typer
+- Product Price Scraping
+- Amazon Product Scraper
+- Flipkart Product Scraper
+- HTML Parsing with BeautifulSoup
+- SQLite Database Integration
+- Product Repository Management
+- Product Data Model
+- Price Analysis
+- Lowest, Highest and Average Price Calculation
+- Price Trend Analysis
+- Bar Chart Generation
+- Line Chart Generation
+- HTML Report Generation
+- Jinja2 Template Rendering
+- Streamlit Dashboard
+- Dashboard Metrics
+- Email Alert System
+- APScheduler Integration
+- Automated Testing using Pytest
 
 ---
 
@@ -100,15 +97,21 @@ WebScrapePro/
 - Pytest
 
 ---
-## Future Improvements
 
-- Support for more e-commerce websites
-- Interactive dashboard
-- Real-time price alerts
-- Email notifications
-- Export reports to PDF and Excel
-- Advanced price analytics
+## Requirements
 
+- Python 3.11+
+- Git
+- Requests
+- BeautifulSoup4
+- Pandas
+- SQLAlchemy
+- Matplotlib
+- Jinja2
+- Streamlit
+- APScheduler
+- Pytest
+  
 ## Author
 
 ### Aman Sharma
